@@ -1,1 +1,92 @@
-<html><body><h1>Hello from Multi-Tier Architecture!</h1></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Priyanshu Kumar — Multi-Tier Architecture (AWS)</title>
+  <meta name="description" content="Portfolio: Multi-Tier Architecture (ALB • EC2 • RDS • S3 • CloudFront) — Priyanshu Kumar" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
+      --radius:14px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#061025 0%, #071227 100%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:1100px;margin:40px auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    .logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(6,182,212,0.12)}
+    .logo svg{width:40px;height:40px;fill:white;opacity:0.95}
+    h1{font-size:26px;margin:0 0 4px 0;letter-spacing:-0.3px}
+    .sub{color:var(--muted);font-size:14px;margin-top:2px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:20px;margin-bottom:18px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px}
+    .btn{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#032022;font-weight:600;text-decoration:none}
+    .muted{color:var(--muted);font-size:13px}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .pill{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:13px;border:1px solid rgba(255,255,255,0.02)}
+    .diagram{width:100%;height:220px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+    .section-title{font-size:16px;margin:6px 0 12px 0}
+    ul.features{padding-left:18px;margin:0;color:var(--muted)}
+    pre.snip{background:#03121a;padding:12px;border-radius:8px;color:#b9f4ff;overflow:auto;font-size:13px}
+    footer{color:var(--muted);font-size:13px;margin-top:18px;text-align:center}
+    @media (max-width:880px){.grid{grid-template-columns:1fr} .logo{width:60px;height:60px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-hidden>
+        <svg viewBox="0 0 24 24"><path d="M5 4h6a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4H5zM5 14h7a4 4 0 0 1 4 4v2a1 1 0 0 1-1 1H5z"/></svg>
+      </div>
+      <div style="flex:1">
+        <h1>Priyanshu Kumar — Multi-Tier Architecture</h1>
+        <div class="sub">ALB • EC2 • RDS • S3 + CloudFront</div>
+        <div class="meta" style="margin-top:10px">
+          <div class="pill">Region: <strong style="margin-left:6px;color:#fff">ap-south-1</strong></div>
+          <div class="pill">Demo: <strong style="margin-left:6px;color:#fff">Free-Tier POC</strong></div>
+          <a class="btn" href="https://REPLACE_WITH_ALB_DNS">Open ALB</a>
+          <a class="btn" href="https://REPLACE_WITH_CLOUDFRONT_DOMAIN" style="background:linear-gradient(90deg,#ffd166,#ff7b7b)">Open CloudFront</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <div class="card">
+          <div class="section-title">Project Overview</div>
+          <p class="muted">This project demonstrates a production-pattern multi-tier architecture built on AWS but deployed in Free Tier for demo.</p>
+
+          <ul class="features">
+            <li>Frontend via CloudFront + S3</li>
+            <li>EC2 behind ALB with health checks</li>
+            <li>RDS (MySQL) in private subnet</li>
+            <li>CloudFormation IaC templates</li>
+            <li>CloudWatch monitoring</li>
+          </ul>
+
+          <div style="margin-top:14px">
+            <div class="section-title">Live Endpoints</div>
+            <div class="muted">ALB: <code>https://REPLACE_WITH_ALB_DNS</code></div>
+            <div class="muted">CloudFront: <code>https://REPLACE_WITH_CLOUDFRONT_DOMAIN</code></div>
+          </div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="card">
+          <div class="section-title">Deployment Files</div>
+          <div class="muted">
+            cloudformation-ec2-alb.yaml<br>
+            cloudformation-rds.yaml<br>
+            deployment-guide.md<br>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © 2025 Priyanshu Kumar — AWS Multi-Tier Architecture
+    </footer>
+  </div>
+</body>
+</html>
